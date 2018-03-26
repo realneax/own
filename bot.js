@@ -58,6 +58,8 @@ client.on("message", async message => {
   }
 
   if(message.content.startsWith(config.prefix+"8ball")) {
+      if (message.author.id !== '285887620813160450')
+    return;
     if(!args[2]) return message.reply("Please ask a full quesition");
     let replies = ["Yes", "No", "I don't know", "Ask later again"];
 
